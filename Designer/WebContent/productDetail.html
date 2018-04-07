@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=0.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<link href="src/css/public.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" href="src/css/swiper.min.css" type="text/css" />
+		<script type="text/javascript" src="src/js/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="src/js/public.js"></script>
+		<title>商品详细</title>
+		<style>
+			.sq_kuan {
+				width: 100%;
+			}
+			
+			.kuan_list {
+				width: 100%;
+				clear: both;
+				height: 35px;
+				line-height: 35px
+			}
+			
+			.kuan_list li {
+				width: 50%;
+				float: left;
+				list-style: none;
+				text-align: center;
+				background-color: #8ccede
+			}
+			
+			.kuan_list li.fjg {
+				background-color: #fff;
+				color: #8ccede;
+			}
+			
+			.kuan_con {
+				width: 100%;
+				height: auto;
+				padding-bottom: 42px;
+			}
+			
+			.sq-kuan {
+				width: 100%;
+				padding-bottom: 42px;
+			}
+			
+			.kuan-list {
+				width: 100%;
+				clear: both;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				margin: 0 auto;
+				border: 1px solid #fcd765;
+				border-radius: 8px;
+			}
+			
+			.kuan-list li {
+				width: 25%;
+				height: 20px;
+				float: left;
+				list-style: none;
+				background-color: #fcd765;
+				color: #7a7a7a;
+			}
+			
+			.kuan-list li.pjg {
+				width: 25%;
+				background-color: #f3f3f3;
+			}
+			
+			.kuan-con {
+				width: 100%;
+				height: auto
+			}
+			
+			.count-num {
+				line-height: 1.5!important;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+				kuanTab(); //弹窗选项卡
+			});
+
+			function kuanTab() {
+				var Li = $('#kuan_tit li');
+				Li.click(function() {
+					var fgd = $(this).hasClass('fjg'); //判断是否有背景
+					var num = $(this).index();
+					var thisCon = $('.sq_kuan .kuan_con').eq(num);
+					//alert(num);
+					if(fgd == false) {
+						Li.removeClass('fjg');
+						$(this).addClass('fjg');
+
+						$('.kuan_con').hide();
+						thisCon.show();
+					}
+				});
+			}
+		</script>
+	</head>
+
+	<body>
+		<header class="detail-img">
+			<a href="index.jsp" class="detail-left-img"> </a>
+			<a href="purcar.html" class="detail-right-img"></a>
+
+			<div class="banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#"><img src="src/images/sdjf_01.png" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="src/images/sdjf_01.png" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="src/images/sdjf_01.png" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="src/images/sdjf_01.png" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="src/images/sdjf_01.png" /></a>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</header>
+
+		<div class="detai-top-txt clearfix"><span class="detai-top-txt-one">RG版Gundam机动战士敢达拼装模型 RG
+  11命运敢达181595</span><span class="detai-top-txt-two">￥159</span></div>
+		<div class="sq_kuan">
+			<ul class="kuan_list clearfix" id="kuan_tit">
+				<li class="fjg">商品详情</li>
+				<li>评论<span class="count-num">（12）</span></li>
+			</ul>
+			<div class="kuan_con" style="display:block;">
+				<p class="mo-one-txt">高达模型一直是高达动画周边系列不可动摇的主导产品， 高达模型的出现将动画上的巨大的机械人立体化地展现。高达类的模型属于科幻类模型，又分为诸多系列，其中包括了PG，MG，MB，HG，TV，FG，RG，RE/100，SD等。</p>
+				<div class="guangao-one"><img src="src/images/guangao_03.png" /></div>
+				<div class="guangao-one"><img src="src/images/guangao_2.png" /></div>
+				<div class="guangao-one"><img src="src/images/guangao.png" /></div>
+
+			</div>
+			<div class="kuan_con" style="display:none;">
+				<!--评论开始-->
+				<div class="commend-main">
+					<h3 class="commend-title"><span class="count">12</span>条</h3>
+					<div class="commend-content clearfix">
+						<span class="user-img fl"><img src="src/images/link.jpg"/></span>
+						<div class="commend-main-content fl">
+							<p class="user-name">用户名</p>
+							<p class="commend-detail">用户评论内容</p>
+							<p class="commend-time">3天前</p>
+						</div>
+						<a href="#" class="reply">回复</a>
+					</div>
+				</div>
+				<!--评论结束-->
+			</div>
+		</div>
+		<footer class="robot-footer clearfix">
+			<a class="robot-a1" href="#">加入购物车</a>
+			<a class="robot-a2" href="#">立即下单</a>
+		</footer>
+		<div class="gou-mai"> </div>
+		<div class="gou-mai-con" style="padding-bottom: 35px!important;">
+			<div class="gou-mai-img"><img src="src/images/user_05.png" /></div>
+			<span class="detail-close"><b>X</b></span>
+			<div class="detail-fixed-txt">
+				<p class="detail-red-jiage">￥159</p>
+				<p>已卖：<span class="sell-count">455</span>件</p>
+				<p>请选择颜色分类尺码</p>
+			</div>
+			<p>颜色分类</p>
+			<p class="detail-color clearfix"><span class="detail-color-green detail-color-blue detail-change">蓝色</span><span class="detail-color-green detail-change">绿色</span></p>
+			<p>尺码</p>
+			<p class="detail-color clearfix"><span class="detail-color-green detail-color-width detail-color-blue">大</span><span class="detail-color-green detail-color-width">中</span><span class="detail-color-green detail-color-width">小</span></p>
+			<div class="goumai-shulian">
+				<p>购买数量</p>
+			</div>
+			<!--数量增减开始-->
+			<div class="gw-num" style="display: block;">
+				<span class="jian">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>
+			<!--数量增减结束-->
+			<!--地址选择开始-->
+			<a class="address-link" href="address1.html">
+				<div class="address-chose-con">
+					<p class="receive-man">收货人：<span>某某人</span><span class="receive-phone">15359284087</span></p>
+					<p class="detail-address">收货地址：<span>福建省厦门市思明区莲前街道软件园二期观日路00号
+000<i class="icon-arrow"></i></span></p>
+				</div>
+			</a>
+			<!--地址选择结束-->
+			<footer class="detail-footer"><span>合计：</span><span class="pro-jiage">￥<span id='price'>159</span></span>
+				<span class="pro-xiadan">付款</span>
+			</footer>
+		</div>
+
+		<!-- Swiper JS -->
+		<script src="src/js/swiper.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				paginationClickable: true,
+				spaceBetween: 30,
+				centeredSlides: true,
+				autoplay: 2500,
+				autoplayDisableOnInteraction: false
+			});
+		</script>
+<!--弹幕-->
+<script src="./canvasBarrage.js"></script>
+<script>
+// 弹幕数据
+var dataBarrage = [{
+	value: 'speed设为0为非滚动',
+	time: 1, // 单位秒
+	speed: 0
+}, {
+	value: 'time控制弹幕时间，单位秒',
+	color: 'blue',
+	time: 2
+}, {
+	value: '视频共21秒',
+	time: 3.2
+}, {
+	value: '视频背景为白色',
+	time: 4.5
+}, {
+	value: '视频为录制',
+	time: 5.0
+}, {
+	value: '视频内容简单',
+	time: 6.3
+}, {
+	value: '是为了让视频尺寸不至于过大',
+	time: 7.8
+}, {
+	value: '省流量',
+	time: 8.5
+}, {
+	value: '支持弹幕暂停（视频暂停）',
+	time: 9
+}, {
+	value: 'add()方法新增弹幕',
+	time: 11
+}, {
+	value: 'reset()方法重置弹幕',
+	time: 11
+}, {
+	value: '颜色，字号，透明度可全局设置',
+	time: 13
+}, {
+	value: '具体交互细节可参考页面源代码',
+	time: 14
+}, {
+	value: '内容不错哦！',
+	time: 18,
+	color: 'yellow'
+}];
+
+// 初始化弹幕方法
+var eleCanvas = document.getElementById('canvasBarrage');
+var eleVideo = document.getElementById('videoBarrage');
+
+var demoBarrage = new CanvasBarrage(eleCanvas, eleVideo, {
+	data: dataBarrage
+});
+
+// 下面是交互处理，与弹幕方法本身无关，旨在演示如何修改全局设置，新增弹幕等
+// 1. 全局的弹幕大小，位置和透明度处理
+document.addEventListener("DOMContentLoaded", function() {
+	$('.range').on('change', function () {
+		// 改变弹幕的透明度和字号大小
+		demoBarrage[this.name] = this.value * 1;
+	});
+	
+	$('input[name="range"]').on('click', function () {
+		// 改变弹幕在视频显示的区域范围
+		demoBarrage['range'] = this.value.split(',');
+	});
+	
+	// 发送弹幕
+	var elForm = $('#barrageForm'), elInput = $('#input');
+	elForm.on('submit', function (event) {
+		event.preventDefault();	
+		// 新增弹幕
+		demoBarrage.add({
+			value: $('#input').val(),
+			color: $('#color').val(),
+			time: eleVideo.currentTime
+		});
+		
+		elInput.val('').trigger('input');
+	});
+	// 提交按钮
+	var elSubmit = elForm.find('input[type="submit"]');
+	
+	// 输入框和禁用按钮
+	elInput.on('input', function () {
+		if (this.value.trim()) {
+			elSubmit.removeAttr('disabled');
+		} else {
+			elSubmit.attr('disabled', 'disabled');
+		}
+	});
+	
+}, false);
+</script>
+
+<script src="https://qidian.gtimg.com/c/=/lulu/theme/peak/js/plugin/jquery.js,/lulu/theme/peak/js/common/ui/Follow.js,/lulu/theme/peak/js/common/ui/Tips.js,/lulu/theme/peak/js/common/ui/Range.js,/lulu/theme/peak/js/common/ui/Drop.js,/lulu/theme/peak/js/common/ui/Color.js"></script>
+<script>
+$('.range').range();
+$('#color').color();
+</script>
+	</body>
+
+</html>

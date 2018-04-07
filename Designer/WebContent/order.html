@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=0.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<link href="src/css/public.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="src/js/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="src/js/public.js"></script>
+		<title>我的订单</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				height: 100%;
+			}
+			
+			.clear {
+				clear: both;
+			}
+			
+			.sq_kuan {
+				width: 100%;
+			}
+			
+			.kuan_list {
+				width: 100%;
+				clear: both;
+				height: 35px;
+				line-height: 35px;
+				font-size: 0.875rem;
+				background-color: #fff;
+			}
+			
+			.kuan_list li {
+				width: 20%;
+				float: left;
+				list-style: none;
+				color: #000;
+				text-align: center
+			}
+			
+			.kuan_list li.fjg {
+				color: #e6786b;
+				border-bottom: 1px solid #f00;
+			}
+			
+			.kuan_con {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+				kuanTab(); //弹窗选项卡
+			});
+
+			function kuanTab() {
+				var Li = $('#kuan_tit li');
+				Li.click(function() {
+					var fgd = $(this).hasClass('fjg'); //判断是否有背景
+					var num = $(this).index();
+					var thisCon = $('.sq_kuan .kuan_con').eq(num);
+					//alert(num);
+					if(fgd == false) {
+						Li.removeClass('fjg');
+						$(this).addClass('fjg');
+
+						$('.kuan_con').hide();
+						thisCon.show();
+					}
+				});
+			}
+		</script>
+	</head>
+
+	<body>
+		<header class="product-hd commend-header">
+			<a href="index.jsp#&page1" class="pre"></a>我的订单
+			<a href="#" class="search-png"></a>
+		</header>
+		<div class="sq_kuan fl">
+			<ul class="kuan_list" id="kuan_tit">
+				<li class="fjg">全部</li>
+				<li>待发货</li>
+				<li>待收货</li>
+				<li>待评价</li>
+				<li>已完成</li>
+			</ul>
+			<div class="kuan_con" style="display:block;">
+				<div class="mod1-con">
+					<p class="con-top"></p>
+					<div class="wode-mid-con clearfix"><span class="photo-inf"><img src="src/images/car_model.png"/></span>
+						<div class="mid-con-txt">
+							<p>阿斯顿马丁合金小汽车模型儿童 玩具车模声光回力车
+							</p>
+							<p class="color-classify">颜色分类：<span>红色</span></p>
+						</div>
+						<div class="wode-right-txt">
+							<p>￥85</p>
+							<p>x1</p>
+						</div>
+
+					</div>
+					<div class="wode-con-bottom-txt">
+						<div class="wode-container">
+							<p><span class="yijian">共一件商品</span><span>合计:￥188</span></p>
+						</div>
+						<div class="wode--container clearfix">
+							<span class="wode-txtone">已发货</span>
+							<a href="#" class="wode-txttwo">确认收货</a>
+							<a href="logistics.html" class="wode-txtthree">查看物流</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="mod1-con">
+					<p class="con-top"></p>
+					<div class="wode-mid-con clearfix"><span class="photo-inf"><img src="src/images/car_model.png"/></span>
+						<div class="mid-con-txt">
+							<p>阿斯顿马丁合金小汽车模型儿童 玩具车模声光回力车
+							</p>
+							<p class="color-classify">颜色分类：<span>红色</span></p>
+						</div>
+						<div class="wode-right-txt">
+							<p>￥85</p>
+							<p>x1</p>
+						</div>
+
+					</div>
+					<div class="wode-con-bottom-txt">
+						<div class="wode-container">
+							<p><span class="yijian">共一件商品</span><span>合计:￥188</span></p>
+						</div>
+						<div class="wode--container clearfix">
+							<span class="wode-txtone">交易成功</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="mod1-con">
+					<p class="con-top"></p>
+					<div class="wode-mid-con clearfix"><span class="photo-inf"><img src="src/images/car_model.png"/></span>
+						<div class="mid-con-txt">
+							<p>阿斯顿马丁合金小汽车模型儿童 玩具车模声光回力车
+							</p>
+							<p class="color-classify">颜色分类：<span>红色</span></p>
+						</div>
+						<div class="wode-right-txt">
+							<p>￥85</p>
+							<p>x1</p>
+						</div>
+
+					</div>
+					<div class="wode-mid-con clearfix"><span class="photo-inf"><img src="src/images/car_model.png"/></span>
+						<div class="mid-con-txt">
+							<p>阿斯顿马丁合金小汽车模型儿童 玩具车模声光回力车
+							</p>
+							<p class="color-classify">颜色分类：<span>红色</span></p>
+						</div>
+						<div class="wode-right-txt">
+							<p>￥85</p>
+							<p>x1</p>
+						</div>
+
+					</div>
+					<div class="wode-con-bottom-txt">
+						<div class="wode-container">
+							<p><span class="yijian">共2件商品</span><span>合计:￥188</span></p>
+						</div>
+						<div class="wode--container clearfix">
+							<span class="wode-txtone">交易关闭</span>
+							<a href="#" class="wode-clear">删除订单</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="kuan_con" style="display:none;">
+				<p class="nothing">未有内容</p>
+			</div>
+			<div class="kuan_con" style="display:none;">
+				<div class="mod1-con">
+					<p class="con-top"></p>
+					<div class="wode-mid-con clearfix"><span class="photo-inf"><img src="src/images/car_model.png"/></span>
+						<div class="mid-con-txt">
+							<p>阿斯顿马丁合金小汽车模型儿童 玩具车模声光回力车
+							</p>
+							<p class="color-classify">颜色分类：<span>红色</span></p>
+						</div>
+						<div class="wode-right-txt">
+							<p>￥85</p>
+							<p>x1</p>
+						</div>
+
+					</div>
+					<div class="wode-con-bottom-txt">
+						<div class="wode-container">
+							<p><span class="yijian">共一件商品</span><span>合计:￥188</span></p>
+						</div>
+						<div class="wode--container clearfix">
+							<span class="wode-txtone">已发货</span>
+							<a href="#" class="wode-txttwo">确认收货</a>
+							<a href="logistics.html" class="wode-txtthree">查看物流</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="kuan_con" style="display:none;">
+				<div class="mod1-con">
+					<p class="con-top"></p>
+					<div class="wode-mid-con clearfix"><span class="photo-inf"><img src="src/images/car_model.png"/></span>
+						<div class="mid-con-txt">
+							<p>阿斯顿马丁合金小汽车模型儿童 玩具车模声光回力车
+							</p>
+							<p class="color-classify">颜色分类：<span>红色</span></p>
+						</div>
+						<div class="wode-right-txt">
+							<p>￥85</p>
+							<p>x1</p>
+						</div>
+
+					</div>
+					<div class="wode-con-bottom-txt">
+						<div class="wode-container">
+							<p><span class="yijian">共一件商品</span><span>合计:￥188</span></p>
+						</div>
+						<div class="wode--container clearfix">
+							<span class="wode-txtone">未评价</span>
+							<a href="fabiao.html" class="wode-txtthree">立即评价</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="kuan_con" style="display:none;">
+				<div class="mod1-con">
+					<p class="con-top"></p>
+					<div class="wode-mid-con clearfix"><span class="photo-inf"><img src="src/images/car_model.png"/></span>
+						<div class="mid-con-txt">
+							<p>阿斯顿马丁合金小汽车模型儿童 玩具车模声光回力车
+							</p>
+							<p class="color-classify">颜色分类：<span>红色</span></p>
+						</div>
+						<div class="wode-right-txt">
+							<p>￥85</p>
+							<p>x1</p>
+						</div>
+
+					</div>
+					<div class="wode-con-bottom-txt">
+						<div class="wode-container">
+							<p><span class="yijian">共一件商品</span><span>合计:￥188</span></p>
+						</div>
+						<div class="wode--container clearfix">
+							<span class="wode-txtone">交易成功</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="mod1-con">
+					<p class="con-top"></p>
+					<div class="wode-mid-con clearfix"><span class="photo-inf"><img src="src/images/car_model.png"/></span>
+						<div class="mid-con-txt">
+							<p>阿斯顿马丁合金小汽车模型儿童 玩具车模声光回力车
+							</p>
+							<p class="color-classify">颜色分类：<span>红色</span></p>
+						</div>
+						<div class="wode-right-txt">
+							<p>￥85</p>
+							<p>x1</p>
+						</div>
+
+					</div>
+					<div class="wode-mid-con clearfix"><span class="photo-inf"><img src="src/images/car_model.png"/></span>
+						<div class="mid-con-txt">
+							<p>阿斯顿马丁合金小汽车模型儿童 玩具车模声光回力车
+							</p>
+							<p class="color-classify">颜色分类：<span>红色</span></p>
+						</div>
+						<div class="wode-right-txt">
+							<p>￥85</p>
+							<p>x1</p>
+						</div>
+
+					</div>
+					<div class="wode-con-bottom-txt">
+						<div class="wode-container">
+							<p><span class="yijian">共2件商品</span><span>合计:￥188</span></p>
+						</div>
+						<div class="wode--container clearfix">
+							<span class="wode-txtone">交易关闭</span>
+							<a href="#" class="wode-clear">删除订单</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<div class="gou-mai"> </div>
+		<div class="wode-queren">
+			<p class="queren-top-txt">确认删除订单？</p>
+			<div class="que-bottom-txt clearfix"><span class="que-bottom-txt-one">取消</span><span class="que-bottom-txt-two">确认</span></div>
+		</div>
+		<script>
+			/**
+			 * 计算选项卡高度
+			 * */
+			var bodyHeight = $('body').height();
+			var commendHeaderHeight = $('.commend-header').outerHeight();
+			var listHeight = $('.kuan_list').outerHeight();
+			$('.kuan_con').css('height', bodyHeight - commendHeaderHeight - listHeight);
+		</script>
+	</body>
+
+</html>

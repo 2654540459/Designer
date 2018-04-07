@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=0.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<link href="src/css/public.css" type="text/css" rel="stylesheet" />
+		<title>个人中心</title>
+	</head>
+
+	<body id="message-body">
+		<header class="product-hd commend-header" style="background: #313131;">
+			<a href="javascript:history.go(-1)" class="pre"></a>消息
+			<a href="shouhuodizhi.html" class="jiahao-png"></a>
+		</header>
+		<div class="sq_kuan">
+			<ul class="kuan_list clearfix" id="kuan_tit">
+				<span id="one" class="fjg">系统通知</span>
+				<span id="two">通知我的</span>
+			</ul>
+			<div class="kuan_con" id="left-kuan-con" style="display:block;"><p class="nothing">未有内容</p></div>
+			<div class="kuan_con" id="right-kuan-con" style="display:none;"><p class="nothing">未有内容</p></div>
+
+		</div>
+		<!--选项卡-->
+		<script src="src/js/jquery-1.8.0.min.js"></script>
+		<script src="src/js/swipe.js"></script>
+		<script>
+			$(document).ready(function() {
+				kuanTab(); //弹窗选项卡
+			});
+
+			function kuanTab() {
+				var Li = $('#kuan_tit span');
+				Li.click(function() {
+					var fgd = $(this).hasClass('fjg'); //判断是否有背景
+					var num = $(this).index();
+					var thisCon = $('.sq_kuan .kuan_con').eq(num);
+					//alert(num);
+					if(fgd == false) {
+						Li.removeClass('fjg');
+						$(this).addClass('fjg');
+
+						$('.kuan_con').hide();
+						thisCon.show();
+					}
+				});
+			}
+		</script>
+		<script>
+			/**
+			 * swipeLeft手指滑动
+			 * */
+			$('#left-kuan-con').rhuiSwipe('swipeLeft', function(event) {
+				$('#two').click();
+			}, {
+				// 可选参数
+				isStopPropagation: false,
+				isPreventDefault: false,
+				triggerOnMove: true
+			});
+			$('#right-kuan-con').rhuiSwipe('swipeRight', function(event) {
+				$('#one').click();
+			}, {
+				// 可选参数
+				isStopPropagation: false,
+				isPreventDefault: false,
+				triggerOnMove: true
+			});
+		</script>
+		<script>
+			/**
+			 * 计算选项卡高度
+			 * */
+			var bodyHeight = $('body').height();
+			var commendHeaderHeight = $('.commend-header').outerHeight();
+			var listHeight = $('.kuan_list').outerHeight();
+			$('.kuan_con').css('height', bodyHeight - commendHeaderHeight - listHeight);
+		</script>
+	</body>
+
+</html>

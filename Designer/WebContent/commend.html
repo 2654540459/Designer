@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=0.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link href="src/css/public.css" type="text/css" rel="stylesheet"/>
+    <script src="src/js/jquery-1.8.0.min.js"></script>
+		<title>评论</title>
+	</head>
+	<body>
+		<!--头部开始-->
+		<header class="product-hd commend-header"> <a href="index.jsp" class="pre"></a>评论 <a href="shouhuodizhi.html" class="jiahao-png"></a>
+</header>
+<!--头部结束-->
+<!--评论开始-->
+	<div class="commend-main">
+		<h3 class="commend-title"><span class="count">12</span>条</h3>
+		<div class="commend-content clearfix">
+			<span class="user-img fl"><img src="src/images/link.jpg"/></span>
+			<div class="commend-main-content fl">
+				<p class="user-name">用户名</p>
+				<p class="commend-detail">用户评论内容</p>
+				<p class="commend-time">3天前</p>
+			</div>
+			<a href="#" class="reply">回复</a>
+		</div>
+	</div>
+	<!--评论结束-->
+	<!--发送评论开始-->
+	<form class="commend-footer">
+		<div class="footer-con">
+			<input class="send-input" type="text" placeholder="请输入要发送的内容"/>
+			<button id='btn' class="send"></button>
+			<label for='btn' class='btn send-label'>发送</label>
+		</div>
+	</form>
+	<!--发送评论结束-->
+	<script>
+		//回复评论
+		$('.reply').click(function(){
+			var content="@"+$(this).prev('div').children('.user-name').html();
+			$('.send-input').focus().attr("placeholder",content);
+		});
+	</script>
+	</body>
+</html>

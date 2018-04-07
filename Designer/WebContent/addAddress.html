@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=0.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link href="src/css/public.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="src/css/ydui.css">
+	<link rel="stylesheet" href="src/css/demo.css">
+    <title>新增收货地址</title>
+    <style type="text/css">
+.chk_3 {
+    display: none;
+} 
+.chk_3 + label {
+	background-color: #fafbfa;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+	-webkit-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+	width: 30px;
+	height: 16px;
+}
+
+.chk_3  + label:after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	-webkit-transition: box-shadow 0.1s ease-in;
+	transition: box-shadow 0.1s ease-in;
+	left: 0;
+	width: 30px;
+	height: 16px;
+	border-radius: 100px;
+	box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0,0,0,0.4);
+}
+
+.chk_3  + label:before {
+	content: ' ';
+	position: absolute;
+	background: white;
+	top: 0;
+	left: 2px;
+	z-index: 999999;
+	width: 16px;
+	-webkit-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+	height: 16px;
+	border-radius: 100px;
+	box-shadow: 0 3px 1px rgba(0,0,0,0.05), 0 0px 1px rgba(0,0,0,0.3);
+}
+
+.chk_3:active + label:after {
+	box-shadow: inset 0 0 0 20px #eee, 0 0 1px #eee;
+}
+
+.chk_3:active + label:before {
+	width: 30px;
+}
+
+.chk_3:checked:active + label:before {
+	width: 30px;
+	left: 12px;
+}
+
+.chk_3  + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.chk_3:checked + label:before {
+	content: ' ';
+	position: absolute;
+	left: 12px;
+	border-radius: 100px;
+}
+
+.chk_3:checked + label:after {
+	content: ' ';
+	font-size: 1.5em;
+	position: absolute;
+	background: #4cda60;
+	box-shadow: 0 0 1px #4cda60;
+}
+.xuan-ze{
+	width:auto;
+	height:auto;
+	float:right;
+	margin-right:12px;
+	margin-top:5px;
+}
+</style>
+</head>
+<body>
+<header class="product-hd"> <a href="javascript:history.go(-1);" class="pre"></a><a href="dizhi.html" class="top-right-tt">保存</a>
+</header>
+<form class="shouhuo-form">
+<article class="shouhuo-ren">
+<span class="shouhuo-ren-txt">收货人:</span>
+<input name="" class="shouhuo-ren-input" placeholder="请填写收货人的姓名"/>
+</article>
+<article class="shouhuo-ren shouhuo-teshu">
+<span class="shouhuo-ren-txt">手机号码:</span>
+<input name="" class="shouhuo-ren-input" placeholder="请填写收货手机号码"/>
+</article>
+</article>
+<article class="shouhuo-ren shouhuo--teshu">
+<span class="shouhuo-ren-txt">收货地址:</span>
+<input name="" class="shouhuo-ren-input"  id="J_Address" placeholder="福建省  福州市  市辖区"/>
+<span></span>
+</article>
+<div class="shouhuo-form-bottom"><input name="" type="text" placeholder="街道、楼号等详情信息"/></div>
+</form>
+<div class="set-moren clearfix">设为默认地址<div class="xuan-ze"><input type="checkbox" id="checkbox_c1" class="chk_3" /><label for="checkbox_c1"></label></div>
+</div>
+<script src="src/js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="src/js/public.js"></script>
+<script type="text/javascript" src="src/js/ydui.citys.js"></script>
+<script type="text/javascript" src="src/js/ydui.js"></script>
+<script>
+			/**
+			 * 地址默认调用
+			 */
+			! function() {
+				var $target = $('#J_Address');
+
+				$target.citySelect();
+
+				$target.on('click', function(event) {
+					event.stopPropagation();
+					$target.citySelect('open');
+				});
+
+				$target.on('done.ydui.cityselect', function(ret) {
+					$(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+				});
+			}();
+		</script>
+
+</body>
+</html>
